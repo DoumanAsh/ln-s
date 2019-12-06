@@ -1,0 +1,18 @@
+[package]
+name = "ln-s"
+version = "0.1.0"
+authors = ["Douman <douman@gmx.se>"]
+edition = "2018"
+repository = "https://github.com/DoumanAsh/ln-s"
+description = "Cross-platform symlink utility"
+license = "Apache-2.0"
+readme = "README.md"
+
+[dependencies]
+arg = "0.2"
+c-ffi = { version = "0.2", default-features = false }
+
+[profile.release]
+lto = true
+opt-level = "z"
+codegen-units = 1
